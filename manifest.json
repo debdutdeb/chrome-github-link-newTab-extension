@@ -1,0 +1,13 @@
+{
+"manifest_version": 3,
+  "name": "GitHub Link New Tab",
+  "description": "Open links in github issues in new tab",
+  "version": "1.0",
+  "content_scripts": [{
+	  "matches": ["https://github.com/*/*/pull/*", "https://github.com/*/*/issues/*"],
+	  "js": ["blank.js"],
+	  "world": "ISOLATED",
+	  "run_at": "document_idle",
+	  "all_frames": true
+  }]
+}
